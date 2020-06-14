@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,12 +17,17 @@ public class MainActivity extends AppCompatActivity {
         EditText usernameEditText = findViewById(R.id.usernameEditText);
         EditText passwordEditText = findViewById(R.id.passwordEditText);
 
+        ImageView iv = findViewById(R.id.imageView);
+
         Log.i("Values", usernameEditText.getText().toString());
         Log.i("Values", passwordEditText.getText().toString());
 
         //context is app itself(so this)
         Toast.makeText(this, "Hi, " + nameEditText.getText().toString(),
                 Toast.LENGTH_SHORT).show();
+
+        iv.setImageResource(R.drawable.cat);
+
 
     }
 
